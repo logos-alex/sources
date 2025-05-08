@@ -1,36 +1,44 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>שחזור מקור עברי-ארמי וביאור - מהדורת בזא</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        /* Custom styles for better readability and section differentiation */
+        /* Custom styles for a traditional, readable design */
         body {
-            font-family: 'Inter', sans-serif; /* Using Inter font */
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            font-family: 'Cardo', Georgia, serif; /* Using Cardo with fallbacks */
+            line-height: 1.8; /* Increased line spacing for readability */
+            color: #333; /* Standard text color */
+            background-color: #f0e6d3; /* Light cream/beige background */
             padding: 1rem; /* Add some padding around the body */
+            text-align: right; /* Ensure text is aligned to the right */
         }
         .container {
             max-width: 800px;
             margin: 0 auto; /* Center the container */
-            background-color: #fff;
+            background-color: #fff; /* White background for the content area */
             padding: 1.5rem; /* More padding inside the container */
             border-radius: 0.5rem; /* Rounded corners */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
         }
         h1, h2, h3 {
-            color: #0056b3; /* A shade of blue for headings */
+            color: #4a235a; /* Deep purple/burgundy for headings */
             margin-bottom: 0.75rem; /* Space below headings */
+            text-align: right; /* Ensure headings are aligned right */
         }
         h1 {
             font-size: 2.25rem; /* Larger main title */
             font-weight: bold;
-            text-align: center;
-            border-bottom: 2px solid #0056b3;
+            text-align: center; /* Center the main title */
+            border-bottom: 2px solid #4a235a; /* Matching border color */
             padding-bottom: 0.75rem;
             margin-bottom: 1.5rem;
         }
@@ -38,45 +46,62 @@
             font-size: 1.75rem; /* Chapter/Major Section titles */
             font-weight: 600;
             margin-top: 2rem; /* More space above major sections */
-            border-bottom: 1px dashed #ccc;
+            border-bottom: 1px dashed #ccc; /* Subtle dashed separator */
             padding-bottom: 0.5rem;
         }
         h3 {
             font-size: 1.25rem; /* Subsection titles */
             font-weight: 600;
             margin-top: 1.5rem; /* Space above subsections */
-            color: #007bff; /* Another shade of blue */
+            color: #0d47a1; /* Deep blue */
         }
         p, ul {
             margin-bottom: 1rem; /* Space below paragraphs and lists */
+            text-indent: 1.5em; /* Indent paragraphs for a book-like feel */
         }
+        /* Remove text indent for the first paragraph after a heading */
+        h2 + p, h3 + p, .section-content > p:first-of-type {
+             text-indent: 0;
+        }
+         /* Also remove indent for paragraphs inside special sections if needed */
+        .drasha-section p, .glossary-section p {
+             text-indent: 0;
+        }
+
         ul {
             list-style: disc inside;
             padding-left: 1.25rem; /* Indent lists */
+            text-indent: 0; /* Remove indent for list items */
         }
         li {
             margin-bottom: 0.5rem; /* Space between list items */
+            text-indent: 0; /* Ensure list items are not indented */
         }
+         /* Remove text indent for list items inside special sections */
+         .drasha-section li, .glossary-section li {
+             text-indent: 0;
+         }
+
         .section-content {
             margin-bottom: 2rem; /* Space after each content section */
         }
         .drasha-section {
-            background-color: #e9f5ff; /* Light blue background for Drasha */
+            background-color: #e8f5e9; /* Light green background for Drasha */
             padding: 1.5rem;
-            border-left: 5px solid #0056b3; /* Blue border on the left */
+            border-left: 5px solid #388e3c; /* Dark green border on the left */
             margin-top: 2rem; /* Space above Drasha */
             border-radius: 0.25rem; /* Slightly rounded corners for Drasha */
         }
         .drasha-section h2 {
-            color: #0056b3; /* Match heading color */
+            color: #388e3c; /* Match heading color */
             border-bottom: none; /* Remove border below Drasha heading */
             margin-top: 0; /* Remove top margin for Drasha heading */
             margin-bottom: 1rem; /* Space below Drasha heading */
         }
         .glossary-section {
-             background-color: #fff3cd; /* Light yellow background for Glossary */
+             background-color: #fff9c4; /* Light yellow background for Glossary */
              padding: 1.5rem;
-             border-left: 5px solid #ffc107; /* Yellow border on the left */
+             border-left: 5px solid #fbc02d; /* Golden yellow border on the left */
              margin-top: 2rem;
              border-radius: 0.25rem;
         }
@@ -409,7 +434,7 @@
             <ul>
                 <li>**פסוקים כב-כד:** הבאת ישוע למקדש בירושלים על ידי הוריו לאחר "ימי טהרתו על פי תורת משה". פעולה זו נעשית "להציג לפני יהוה", כפי שמחייבת התורה לגבי כל זכר בכור הפותח רחם (שמות יג', ב'). הם מקריבים קורבן "זוג תורים או שני גוזלי יונים", קורבן עניים לפי תורת כוהנים יב', ח'. פעולות אלו מדגישות את נאמנותם של יוסף ומרים לתורה ואת הכנסת ישוע לברית ולמצוות.</li>
                 <li>**פסוקים כה-לג:** הצגת שמעון הזקן, איש "צדיק וירא שמים, מחכה לנחמת ישראל", אשר "רוח הקודש היתה עליו". נאמר לו מרוח הקודש שלא ימות לפני שיראה את "משיח יהוה". מפגשו עם ישוע במקדש, בהדרכת הרוח, הוא התגשמות הבטחה זו. שמעון מקבל את הילד בזרועותיו ונושא תפילת הודיה לאלהים, המכונה "הנונק דימיטיס". בתפילתו הוא מבקש מהאדון לשחררו בשלום, שכן "ראו עיני את ישועתך, אשר הכינות לפני פני כל העמים". תפילה זו מכירה בישוע כביטוי לישועת האלהים המיועדת לא רק לישראל אלא לכל העמים. הוא ממשיך ומתאר את ישוע כ"אור להאיר עיני גויים, וכבוד לעמך ישראל". תמיהת הוריו על הדברים הנאמרים עליו מצביעה על כך שעדיין לא הבינו את מלוא משמעות ייעודו.</li>
-                <li>**פסוקים לד-לו:** המשך נבואת שמעון. הוא מברך את הוריו ופונה במיוחד למרים, ומנבא שישוע יהיה "למפלה ולתקומה לרבים בישראל, ולאות שיתנגדו לו". נבואה זו רומזת על המחלוקת וההתנגדות שישוע יעורר. האמירה "וגם בנפשך את תחלוף חרב" היא נבואה על סבלה העתידי של מרים. מטרת הדברים היא "למען יתגלו מחשבות לבבות רבים".</li>
+                <li>**פסוקים לד-לו:** המשך נבואת שמעון. הוא מברך את הוריו ופונה במיוחד למרים, ומנבא שישוע יהיה "למפלה ולתקומה לרבים בישראל, ולאות שיתנגדו לו". נבואה זו רומזת על המחלוקת וההתנגדות שישוע יעורר. האמירה "וגם בנפשך את תחלוף חרב" היא נבואה על סבלה העתידית של מרים. מטרת הדברים היא "למען יתגלו מחשבות לבבות רבים".</li>
                 <li>**פסוקים לז-לט:** הצגת חנה הנביאה, "בת פנואל, משבט אשר". היא מתוארת כאישה זקנה ואלמנה, המקדישה את חייה לעבודת האלהים במקדש. מפגשה עם ישוע באותה שעה, הודאתה לאלהים, והדיבור עליו "לכל המחכים לפדות בירושלים", מציגים אותה כעדה נוספת למשיח.</li>
                 <li>**פסוק מ:** תיאור כללי של גדילתו והתפתחותו של ישוע: "התחזק וגדל, מלא חוכמה, וחסד האלהים היה עמו".</li>
             </ul>
@@ -527,7 +552,7 @@
 
                     דברי התוכחה של יוחנן להמון, ובמיוחד האזהרה שלא לסמוך על ייחוסם לאברהם (פסוקים ז-ט), הם ביקורת חריפה על גישה דתית פורמלית ועל ביטחון מוטעה בייחוס גופני. רעיון זה של חשיבות המעשים על פני הייחוס מצוי גם בספרות חז"ל, למשל במסכת אבות (פרק ב', משנה ב'): "ולא המדרש עיקר אלא המעשה". האמירה שהאלהים יכול להקים בנים לאברהם מן האבנים יכולה להתפרש כמדרש על הפסוקים בישעיהו נא', א-ב, "הביטו אל צור חצבתם ואל מקבת בור נקרתם. הביטו אל אברהם אביכם ואל שרה תחוללכם". במדרש, "צור" ו"בור" יכולים להתפרש כרמז למקור האנושות. יוחנן מרחיב את הרעיון ומצביע על כך שהאלהים אינו מוגבל באמצעים טבעיים או היסטוריים להגשמת הבטחותיו, והוא יכול ליצור "בנים לאברהם" (כלומר, יורשים רוחניים של הברית) גם ממי שאינם צאצאיו הגופניים, רעיון שיהפוך מרכזי בנצרות המוקדמת.
 
-                    השאלות המעשיות על מה עליהם לעשות כדי "להיוושע" (פסוקים יג-כ) והתשובות של יוחנן המדגישות צדק חברתי ומוסרי (חלוקת רכוש, הימנעות מעושק), מראות שהתשובה שדורש יוחנן אינה רק פולחנית אלא כוללת תיקון מעשי בחיים. רעיונות אלו של צדק חברתי כחלק מהתשובה וההכנה לגאולה מצויים בשפע בספרות הנבואה (למשל, ישעיהו נח', ו-ז) ובספרות חז"ל.
+                    השאלות המעשיות על מה עליהם לעשות כדי "להיוושע" (פסוקים יג-כ) והתשובות של יוחנן המדגישות צדק חברתי ומוסרי (חלוקת רכוש, הימנעות מעושק), מראות שהתשובה שדורש יוחנן אינה רק פולחנית אלא כוללת תיקון מעשי בחיים. רעיונות אלו של צדק חברתי כחלק מהתשובה והכנה לגאולה מצויים בשפע בספרות הנבואה (למשל, ישעיהו נח', ו-ז) ובספרות חז"ל.
 
                     טבילתו של ישוע על ידי יוחנן (פסוקים כא-כב) היא אירוע בעל משמעות תאולוגית עליונה. פתיחת השמים וירידת רוח הקודש עליו בדמות יונה, יחד עם הקול מן השמים "בני אתה, אני היום ילדתיך", הם הצהרה פומבית על זהותו וייעודו כבן האלהים. הנוסח הייחודי בבזא ("אני היום ילדתיך") המצטט מתהילים ב', ז', יכול להדהד רעיונות מיסטיים או גנוסטיים על "הולדה" רוחנית או אלוהית המתרחשת בטבילה. במסורות גנוסטיות מסוימות, הטבילה נתפסה כרגע של קבלת גנוסיס או התאחדות עם ישות רוחנית עליונה. בקבלה, רעיון "הולדה" רוחנית או האצלה של ספירות יכול להציע הקשר מיסטי להבנת מעמדו של ישוע כ"בן האלהים".
 
@@ -668,7 +693,7 @@
             <h3>ביאור והערות:</h3>
             <ul>
                 <li>**פסוקים לא-לד:** תגובת הקהל הראשונית בנצרת היא תמיהה על "דברי החן" של ישוע, אך גם ספקנות המבוססת על היכרותם אותו כ"בן יוסף". תגובה זו מובילה את ישוע להתייחס לאמרה הידועה ש"אין נביא מתקבל במולדתו".</li>
-                <li>**פסוקים לה-מד:** ישוע ממחיש את דבריו על דחיית הנביא במולדתו על ידי אזכור דוגמאות מאליהו ואלישע, שבהם האלהים בחר להושיע דווקא גויים (האלמנה מצרפת ונעמן הארמי) על פני רבים בישראל. דוגמאות אלו, המצויות במלכים א' פרק יז' ומלכים ב' פרק ה', נועדו להראות שהישועה האלוהית אינה מוגבלת לגבולות או לייחוס, ושהאלהים פועל על פי רצונו. אזכור זה מעורר את חמת הקהל בנצרת.</li>
+                <li>**פסוקים לה-מד:** ישוע ממחיש את דבריו על דחיית הנביא במולדתו על ידי אזכור דוגמאות מאליהו ואלישע, שבהם האלהים בחר להושיע דווקא גויים (האלמנה מצרפת ונעמן הארמי) על פני רבים בישראל. דוגמאות אלו, המצויות בממלכים א' פרק יז' ומלכים ב' פרק ה', נועדו להראות שהישועה האלוהית אינה מוגבלת לגבולות או לייחוס, ושהאלהים פועל על פי רצונו. אזכור זה מעורר את חמת הקהל בנצרת.</li>
                 <li>**פסוקים מה-מט:** תגובת הקהל בנצרת לדברי ישוע היא זעם וניסיון לגרשו מהעיר ואף להשליכו מראש ההר. יציאתו מביניהם בדרך נס מרמזת על הגנה אלוהית.</li>
                 <li>**פסוקים נ-נו:** ישוע יורד לכפר נחום, עיר על שפת ים הגליל, ומתחיל ללמד שם. הקהל בכפר נחום מגיב בהתפעלות ל"תורתו" ומכיר בכך שדברו "בסמכות".</li>
                 <li>**פסוקים נז-עא:** ישוע מגרש שד טמא מאיש בבית הכנסת. השד מזהה את ישוע כ"קדוש האלהים" או "בן האלהים", אך ישוע גוער בו.</li>
